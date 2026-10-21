@@ -1,0 +1,137 @@
+/* =========================================================
+   ONLINE BOOK STORE - POLISHED STYLESHEET
+   ========================================================= */
+
+:root {
+  --font-serif: 'Georgia', Times, serif;
+  --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --color-primary: #1e3a8a;      /* Deep Professional Navy */
+  --color-secondary: #0284c7;    /* Slate Blue */
+  --color-accent: #f59e0b;       /* Warm Amber */
+  --color-bg-light: #f8fafc;     /* Soft Off-White */
+  --color-text: #1e293b;         /* Dark Charcoal Text */
+  --color-border: #cbd5e1;       /* Clean Border Gray */
+}
+
+/* =========================================================
+   1) PAGE BACKGROUND IMAGE & BODY STYLING
+   ========================================================= */
+body {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background-color: #346ced; /* Solid fallback background color */
+  margin: 0;
+  padding: 20px;
+  
+  /* Full Page Background Image with Dark Color Gradient Overlay */
+  background-image: 
+    linear-gradient(rgba(5, 51, 3, 0.82), rgba(216, 234, 10, 0.75)), 
+    url('https://images.unsplash.com/photo-1507842217343-583bb7270b67?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Typography Selectors */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  background-color: rgb(255, 255, 255);
+  padding: 12px 18px;
+  border-radius: 6px;
+  border-left: 5px solid var(--color-accent);
+  box-shadow: 0 2px 4px rgba(221, 4, 4, 0.955);
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: var(--color-secondary);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 6px;
+  margin-top: 1.5rem;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+/* Link Selectors */
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* =========================================================
+   2) SINGLE ELEMENT BACKGROUND IMAGE (Book Cards & Boxes)
+   ========================================================= */
+.book-card, .featured-box {
+  background-color: #ffffff; /* Solid base background color */
+  
+  /* Single Element Background Image with Light Tint Overlay */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
+    url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80');
+  background-size: cover;
+  background-position: center;
+  
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 6px -1px rgba(232, 97, 97, 0.867), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================================
+   3) UI COMPONENTS (Buttons & Forms for Registration/Login)
+   ========================================================= */
+button, input[type="submit"], .btn {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgb(6, 0, 0);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover, input[type="submit"]:hover, .btn:hover {
+  background-color: var(--color-accent);
+  color: #f1f2f4;
+}
+
+/* Form input styling for clean registration and login pages */
+input[type="text"], input[type="password"], input[type="email"], select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 6px 0 14px 0;
+  display: inline-block;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-bg-light);
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-secondary);
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(253, 253, 253, 0.925);
+}
